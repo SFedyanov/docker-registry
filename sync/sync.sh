@@ -82,11 +82,13 @@ getImageArray () {
 
 pullImages() {
   printf "Pulling images...\n\n"
+  docker login --username $SOURCE_REPO_LOGIN --password $SOURCE_REPO_PASSWORD $SOURCE_REPO_URL
   for i in $imagesArray
   do
     echo "Pulling $i"
     docker pull ${SOURCE_REPO_URL}/$i
   done
+  docker logout $SOURCE_REPO_URL
   printf "Done.\n\n"
 }
 
