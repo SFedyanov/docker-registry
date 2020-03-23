@@ -39,16 +39,13 @@ File example:
 SOURCE_REPO_URL=dockerregistry.sitename.com
 SOURCE_REPO_LOGIN=admin
 SOURCE_REPO_PASSWORD=password
+DEST_REPO_URL=dockeranotherregistry.sitename.com
+DEST_REPO_LOGIN=admin
+DEST_REPO_PASSWORD=password
+
 ```
 
 ## How to use
 ```
-cd sync
 ./sync.sh
-
-```
-
-## Addithional info 
-```
-curl -X GET http://admin:password@localhost:7777/v2/_catalog
 ```
