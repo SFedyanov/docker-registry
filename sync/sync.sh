@@ -4,7 +4,7 @@ main () {
   printf "\nDocker repositrory synchronization script \n\n" 
   initEnv 
   getImageArray
-  #pullImages
+  pullImages
   setTags
   pushImages
   removeTags
@@ -70,8 +70,8 @@ loopByImageTags () {
 
 getImageArray () {
   printf "Preparing list of images...\n\n"
-  #loopByImageArray 
-  imagesArray="ifalcon/aerospike:3.3.3 ifalcon/doc_ocr:latest ifalcon/facestream-service:latest ifalcon/hatandbeard:latest ifalcon/ifalcon-server:latest ifalcon/ifalcon-ui:latest ifalcon/ifalcon-ui:showcase ifalcon/luna-admin:3.3.3 ifalcon/luna-api:3.3.3 ifalcon/luna-broker:3.3.3 ifalcon/luna-extractor:3.3.3 ifalcon/luna-faces:3.3.3 ifalcon/luna-facestream:3.3.3 ifalcon/luna-imagestore:3.3.3 ifalcon/luna-matcher:3.3.3 ifalcon/luna-ui:3.3.3 ifalcon/postgres:11.5 ifalcon/postgres:9.6 ifalcon/rabbitmq:3.7.17-management ifalcon/rabbitmq:management ifalcon/reports:latest ifalcon/rtsp:latest"
+  loopByImageArray 
+  #imagesArray="ifalcon/aerospike:3.3.3 ifalcon/doc_ocr:latest ifalcon/facestream-service:latest ifalcon/hatandbeard:latest ifalcon/ifalcon-server:latest ifalcon/ifalcon-ui:latest ifalcon/ifalcon-ui:showcase ifalcon/luna-admin:3.3.3 ifalcon/luna-api:3.3.3 ifalcon/luna-broker:3.3.3 ifalcon/luna-extractor:3.3.3 ifalcon/luna-faces:3.3.3 ifalcon/luna-facestream:3.3.3 ifalcon/luna-imagestore:3.3.3 ifalcon/luna-matcher:3.3.3 ifalcon/luna-ui:3.3.3 ifalcon/postgres:11.5 ifalcon/postgres:9.6 ifalcon/rabbitmq:3.7.17-management ifalcon/rabbitmq:management ifalcon/reports:latest ifalcon/rtsp:latest"
   echo "imagesArray=$imagesArray"
   printf "Done.\n\n"
 }
