@@ -31,6 +31,7 @@ htpasswd -B auth/registry.password user
 ### Docker
 ```
 mkdir data
+docker-compose up -d
 ```
 
 
