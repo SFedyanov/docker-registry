@@ -4,10 +4,6 @@ Own docker registry, with synchronization option.
 
 ## Prerequisite
 
-### Docker
-```
-mkdir data
-```
 
 ### JQ
 
@@ -31,6 +27,12 @@ Next
 ```
 htpasswd -B auth/registry.password user
 ```
+
+### Docker
+```
+mkdir data
+```
+
 
 ### Environment file 
 Create file "sync.env" inside "sync" folder
