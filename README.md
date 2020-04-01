@@ -14,8 +14,9 @@ Rename to jq
 ### SSL 
 ```
 mkdir certs
-openssl req -newkey rsa:4096 -nodes -sha256 -keyout certs/domain.key -x509 -days 365 -out certs/domain.crt
+openssl req -newkey rsa:4096 -nodes -sha256 -keyout certs/privkey.pem -x509 -days 365 -out certs/fullchain.pem
 ```
+or use certbot
 
 ### Auth 
 First time
